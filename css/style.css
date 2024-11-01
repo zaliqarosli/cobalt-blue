@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(14px + 0.390625vw);
+  scroll-behavior: smooth;
+  color: #333;
+  background-color: #eee;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* border: solid 1px red; */
+  height: 100vh;
+}
+
+header > hgroup {
+  min-width: 100vw;
+}
+
+header > hgroup > h1 {
+  text-transform: uppercase;
+  font-size: 5.4em;
+  padding: 0;
+  margin: 0 auto;
+  /* letter-spacing: -0.38em;
+  padding-right: 0.38em; */
+}
+
+.header-img {
+  /* Repeat options: repeat-x, repeat-y, no-repeat */
+  background: url(../images/AdobeStock_950412495.jpeg) no-repeat center center;
+  /* Makes the background cover the whole page, and be responsive to changing screen sizes */
+  background-size: cover;
+  /* width: 100vw; */
+  min-width: 100vw;
+  width: auto;
+  height: 100vh;
+}
+
+nav {
+  /* Load same image as header to match nav gradient before scroll */
+  background: url(../images/AdobeStock_950412495.jpeg) no-repeat center top;
+  /* Makes nav size a little bigger to attempt to match the header image */
+  background-size: 112vw;
+  padding: 1.5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 999;
+  font-size: 0.75em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5vh;
+}
+
+nav > * {
+  padding: 0;
+}
+
+a#home-button,
+a#contact-button {
+  text-transform: uppercase;
+}
+
+span#cobalt-collection {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: 0;
+}
+
+nav a:link,
+nav span,
+footer a:link {
+  padding: 1em;
+  text-decoration: none;
+  text-align: center;
+  color: #333;
+}
+
+nav a:visited,
+footer a:visited {
+  color: #0644bf;
+}
+
+nav > a:hover,
+footer > a:hover,
+footer > img:hover {
+  transform: scale(1.5);
+}
+
+span#cobalt-collection a:hover {
+  background-color: #0644bf;
+  color: #eee;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+nav a:active,
+footer a:active {
+  transform: rotate(45deg);
+}
+
+header hgroup {
+  padding: 1em;
+  text-align: center;
+}
+
+img.try-me {
+  width: 20vh;
+  position: absolute;
+  right: 20px;
+  top: 18vh;
+}
+
+main section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+main section figure {
+  /* Must keep height at 100% and let width determine size */
+  height: 100%;
+  min-width: 60vw;
+  max-width: 100vw;
+  width: auto;
+  padding: 0;
+  margin: 0 0 1em 0;
+  flex: 6;
+  position: sticky;
+  top: 4.5vh;
+}
+
+main section img {
+  width: 100%;
+  /* add display block to remove space between img and figure */
+  display: block;
+}
+
+main section article {
+  flex: 1;
+  padding: 1em;
+  /* Make padding bottom 0 so that bottom of article lines up with the bottom of the image */
+  padding-bottom: 0;
+}
+
+main section article h2 {
+  text-transform: lowercase;
+  margin-top: 0;
+}
+
+main section p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+#swatch {
+  height: 100vh;
+  text-transform: lowercase;
+  color: #eee;
+  padding: 37vh 2em;
+  position: relative;
+  justify-content: center;
+}
+
+#swatch span {
+  width: auto;
+  min-width: 47vw;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#swatch div {
+  height: auto;
+  min-height: 15vw;
+  width: auto;
+  min-width: 15vw;
+  border-radius: 2em;
+  margin: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  content-visibility: hidden;
+}
+
+#swatch div:hover {
+  transform: scale(1.5);
+  content-visibility: visible;
+  z-index: 999;
+}
+
+.sticky-container {
+  height: auto;
+}
+
+#section-c h2 {
+  /* set line height so that top of h2 lines up with image */
+  line-height: 200%;
+}
+
+#section-c {
+  padding-top: 6.4vh;
+}
+
+#section-o {
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  height: auto;
+}
+
+#section-o article {
+  padding-top: 4.5vh;
+  max-width: 60vw;
+  width: auto;
+}
+
+#section-b,
+#section-l {
+  flex-direction: row-reverse;
+  /* border-top: solid 1px #0644bf; */
+}
+
+#section-b figure {
+  /* margin-bottom: 5vh; */
+  /* padding-left: 1em; */
+  /* Force wrap on smaller screen size */
+  min-width: 62vw;
+  width: auto;
+}
+
+#section-b figcaption {
+  font-size: 0.6em;
+  padding-top: 5.5vh;
+  /* margin-bottom: 15px; */
+  text-align: right;
+  background-color: #eee;
+  padding-bottom: 1em;
+  /* padding-bottom: 2em; */
+  padding: 1.5em;
+  border-bottom: solid 0.5px #333;
+}
+
+#section-b article {
+  /* padding-bottom: 5.5vh; */
+  /* padding-right: 0; */
+  text-align: right;
+}
+
+#section-l article {
+  flex: 2;
+  padding-left: 1em;
+}
+
+#section-t {
+  position: relative;
+}
+
+#section-t figure {
+  /* Necessary to allow article to assume auto height and to avoid contents of article from overflowing the parent container */
+  min-height: 95.5vh;
+  height: auto;
+}
+
+#section-t article {
+  /* To make absolute children responsive, set dimensions and positions in percentage */
+  width: 60%;
+  height: auto;
+  min-height: 60%;
+  background-color: #eee;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  bottom: 20%;
+  margin-left: -30%;
+  text-align: center;
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: solid 1px #333;
+  overflow: auto;
+}
+
+.highlight {
+  font-size: 5em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0644bf;
+  -webkit-text-fill-color: white;
+}
+
+#footer {
+  background-color: #eee;
+  width: 100%;
+  height: 8vh;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 0.75em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5%;
+}
+
+#footer span img {
+  width: 15px;
+  height: 15px;
+}
+
+#footer p,
+#footer a,
+#footer span {
+  display: inline;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
